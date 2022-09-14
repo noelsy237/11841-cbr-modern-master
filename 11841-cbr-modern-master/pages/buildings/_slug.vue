@@ -1,20 +1,24 @@
 <template>
-	<div class="container">
-		<h2>{{  $route.params.slug  }}</h2>
-		
-
+	<div>
 		<SiteNavigation />
-
-		<div class="building">
-			<!-- the buiding returns an array with one item in it, so need to reference it below -->
-			<h2>{{  building[0].title.rendered  }}</h2>
-
-			<ul>
-				<li>Address: {{  building[0].acf.location  }}</li>
-				<li>Suburb: {{  building[0].acf.suburb  }}</li>
-				<li>Architect: {{  building[0].acf.architect[0].name  }}</li>
-			</ul>
-			<!-- <pre>{{ $data }}</pre> -->
+		<div class="container">
+			
+			<div class="building">
+				<!-- the buiding returns an array with one item in it, so need to reference it below -->
+				<h2 class="building-title"><a :href="building[0].link">{{  building[0].title.rendered  }}</a></h2>
+				
+				<h4>Where is it located?</h4>
+				<p>{{  building[0].title.rendered  }} is located at {{  building[0].acf.location  }}, {{  building[0].acf.suburb  }}.</p>
+				<h4>Who was/were the architects?</h4>
+				<p>{{  building[0].title.rendered  }} was created and designed by {{  building[0].acf.architect[0].name  }} in {{  building[0].acf.year }}.</p>
+				
+				<!-- <ul>
+					<li>Address: {{  building[0].acf.location  }}, {{  building[0].acf.suburb  }}</li>
+					<li>Suburb: {{  building[0].acf.suburb  }}</li>
+					<li>Architect: {{  building[0].acf.architect[0].name  }}</li>
+				</ul> -->
+				<!-- <pre>{{ $data }}</pre> -->
+			</div>
 		</div>
 	</div>
 </template>
@@ -38,3 +42,9 @@ export default {
 	},
 }
 </script>
+
+<style>
+	.building-title {
+		padding: 30px 0px 30px 0px;
+	}
+</style>
