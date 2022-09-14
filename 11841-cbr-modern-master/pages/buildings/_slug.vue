@@ -8,7 +8,7 @@
 				<h2 class="building-title"><a :href="building[0].link">{{  building[0].title.rendered  }}</a></h2>
 				
 				<h4>Where is it located?</h4>
-				<p>{{  building[0].title.rendered  }} is located at {{  building[0].acf.location  }}, {{  building[0].acf.suburb  }}.</p>
+				<p>{{  building[0].title.rendered  }} is located at {{  building[0].acf.location  }}, {{  building[0].acf.suburb  }}, Canberra.</p>
 				<h4>Who was/were the architects?</h4>
 				<p>{{  building[0].title.rendered  }} was created and designed by {{  building[0].acf.architect[0].name  }} in {{  building[0].acf.year }}.</p>
 				

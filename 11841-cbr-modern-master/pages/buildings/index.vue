@@ -1,19 +1,18 @@
 
 
 <template>
-	
-	<div class="container">
+	<div>
 		<SiteNavigation />
-		
+		<div class="container">
+			<h4>The Top 20 Mid and Late Century Modern Buildings.</h4>
+			<div class="building">
+				<!-- The building list is over in the components folder -->
+				<!-- the code below loads the component here so we can use it again -->
+				<BuildingsList />
 
-
-		<div class="building">
-			<!-- The building list is over in the components folder -->
-			<!-- the code below loads the component here so we can use it again -->
-			<BuildingsList />
-
-			<!-- this is a really useful line of code that will just output what the API call returns -->
-			<!-- <pre>{{ $data }}</pre> -->
+				<!-- this is a really useful line of code that will just output what the API call returns -->
+				<!-- <pre>{{ $data }}</pre> -->
+			</div>
 		</div>
 	</div>
 </template>
