@@ -1,84 +1,30 @@
-<!-- this component can hold site navigation -->
-<!-- if we put it here we can avoid having to repeat the code -->
+
 <template>
-	<nav class="navbar" id="navi-list">
-    <div class="navlist">
-      <NuxtLink to="/" class="listitem">Home</NuxtLink>
-      <NuxtLink to="/about" class="listitem">About</NuxtLink>
-      <NuxtLink to="/buildings" class="listitem">Buildings</NuxtLink>
-    </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
+    <NuxtLink to="/" class="navbar-brand">Canberra Modern</NuxtLink>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom" aria-controls="navbarCustom" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarCustom">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><NuxtLink to="/" class="nav-link">Home</NuxtLink></li>
+        <li class="nav-item"><NuxtLink to="/buildings" class="nav-link">Buildings</NuxtLink></li>
+        <li class="nav-item"><NuxtLink to="/events" class="nav-link">Events</NuxtLink></li>
+        <li class="nav-item"><NuxtLink to="/about" class="nav-link">About</NuxtLink></li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+      </ul>
+    </div>
   </nav>
-  
-</template>
-<script>
-
-// const toggleButton = document.getElementById('toggle-button');
-// const naviList = document.getElementById('navi-list');
-	
-// toggleButton.addEventListener('click', () => {
-// 	naviList.classList.toggle('active');
-// })
-
-</script>
-
-<style>
-
-
-  .listitem {
-    align-content: center;
-    padding: 1em;
-  }
-  .listitem:hover {
-    text-decoration: none;
-  }
-
-  .navbar {
-    display: flex;
-    /* list-style-type: none; */
-    justify-content: center;
-    flex-wrap: wrap;
-    font-size: 32px;
-    background-color: rgb(36, 37, 37);
-    height: 70px;
-  }
-
-
-.navlist .listitem {
-	display: inline-block;
-	padding: 0px 10px;
-  color: #e3e3e3;
-	text-decoration: none;
-  
-}
-
-
-
-.navbar a:hover {
-	color: #696969;
-	transition-duration: 0.5s;
-}
-
-
-
-
-
-
-
-
-
-
-
-	
-
-	
-	
-@media all and (max-width: 430px) {
-	.navlist {
-    list-style-type: circle;
-  }
-
-	
-}
-</style>
-
