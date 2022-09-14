@@ -1,11 +1,9 @@
 <!-- anything in the index file will be on the home page -->
 <template>
   <div class="posts">
-    <div>
-      <nuxt-link to="/building">building</nuxt-link>
-    </div>
+    <SiteNavigation />
     <main class="container">
-      <h2>All pages</h2>
+    
 
       <div class="row">
         <!-- here we loop through the posts -->
@@ -37,7 +35,5 @@ export default {
 </script>
   
   <style>
-  h3 a {
-    color: red;
-  }
+
   </style>
