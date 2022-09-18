@@ -4,14 +4,12 @@
 	<div>
 		<SiteNavigation />
 		<div class="container">
-			<h4>The Top 20 Mid and Late Century Modern Buildings.</h4>
-			<div class="building">
-				<!-- The building list is over in the components folder -->
-				<!-- the code below loads the component here so we can use it again -->
+			<h2>Buildings</h2>  
+			<hr class="hr-class">
+			<div class="building container-custom">
+				<h4>The Top 20 Mid and Late Century Modern Buildings.</h4>
 				<BuildingsList />
 
-				<!-- this is a really useful line of code that will just output what the API call returns -->
-				<!-- <pre>{{ $data }}</pre> -->
 			</div>
 		</div>
 	</div>
@@ -37,4 +35,24 @@ export default {
 
 
 <style>
+
+
+	.hr-class {
+        border-width: 3px;
+        border-color: #343A40;
+    }
+
+    .container-custom {
+        max-width: 700px;
+	    margin: 0 auto;
+    	text-align: center;
+    }
+
+	p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    h2, h4 {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
 </style>

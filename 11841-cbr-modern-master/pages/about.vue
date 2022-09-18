@@ -3,17 +3,11 @@
         <SiteNavigation />
         <div class="container">
             <h2>{{ $route.params.slug }}</h2>  
-            <div class="page">
-                <!-- the data returns an array with one item in it, so need to reference it below -->
-                <h2>{{  page[0].title.rendered  }}</h2>
-                <hr class="hr-class">
-                <!-- create a div to hold the renderedContent variable holding the data we've retrieved below -->
-                <!-- if we don't use the v-html tag it will render it as a string -->
+            <h2>{{  page[0].title.rendered  }}</h2>
+            <hr class="hr-class">
+            <div class="container-custom">
                 <div v-html="renderedContent"></div>
-
-                <!-- this will show all the data returned from the API, use it for troubleshooting -->
-                <!-- <pre>{{ $data }}</pre> -->
-            </div>
+            </div> 
         </div>
     </div>
 </template>
@@ -44,11 +38,32 @@ export default {
 <style>
     .hr-class {
         border-width: 3px;
-        border-color: #343A40;
+        border-color: #F27075;
     }
 
     img {
         max-width: 100%;
         height: auto;
     }
+
+    .container-custom {
+        max-width: 700px;
+	    margin: 0 auto;
+    	text-align: center;
+    }
+
+    p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    h2, h4 {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       
+    }
+    
+    body {
+        background-color:#f6f6f6
+    }
+
 </style>

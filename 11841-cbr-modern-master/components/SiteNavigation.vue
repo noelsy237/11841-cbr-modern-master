@@ -1,8 +1,8 @@
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light">
     
-    <NuxtLink to="/" class="navbar-brand">Canberra Modern</NuxtLink>
+    <NuxtLink to="/" class="navbar-brand cbr">Canberra Modern</NuxtLink>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom" aria-controls="navbarCustom" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -17,3 +17,18 @@
       </ul>
     </div>
   </nav>
+</template>
+
+<style>
+  li {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  }
+
+  .cbr {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  nav {
+    background-color: #7087C2;
+  }
+</style>
