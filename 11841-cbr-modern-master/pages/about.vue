@@ -59,11 +59,10 @@ export default {
 
     h2, h4 {
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-       
+        
     }
-    
+
     body {
         background-color:#f6f6f6
     }
-
 </style>

@@ -1,57 +1,17 @@
-<!-- 
 <template>
-  <div class="posts">
-    <SiteNavigation />
-    <main class="container">
+  <div>
+      <SiteNavigation />
+      <div class="container">
+          <h2>{{ $route.params.slug }}</h2>
     
-
-      <div class="row">
-       
-        <div class="post col" v-for="post in posts" :key="post.id">
-          <h3>
-      
-            <a :href="`events/${post.slug}`">{{  post.title.rendered  }}</a>
-          </h3>
-          <div v-html="post.content.rendered"></div>
-          <p v-html="post.slug"></p>
-          <a :href="`events/${post.slug}`" class="readmore">Read more ⟶</a>
-        </div>
+          
+          <h2>{{  page[0].title.rendered  }}</h2>
+          <hr class="hr-class">
+          <div class="container-custom">
+            <div v-html="renderedContent"></div>
+          </div>
       </div>
-    </main>
   </div>
-</template>
-  
-  <script>
-export default {
-  computed: {
-    posts() {
-      return this.$store.state.posts;
-    },
-  },
-  created() {
-    this.$store.dispatch("getPosts");
-  },
-};
-</script>
-  
-  <style>
-
-  </style> -->
-
-  <template>
-    <div>
-        <SiteNavigation />
-        <div class="container">
-            <h2>{{ $route.params.slug }}</h2>
-      
-            
-            <h2>{{  page[0].title.rendered  }}</h2>
-            <hr class="hr-class">
-            <div class="container-custom">
-              <div v-html="renderedContent"></div>
-            </div>
-        </div>
-    </div>
 </template>
 
 <script>
@@ -80,7 +40,7 @@ export default {
 <style>
   .hr-class {
       border-width: 3px;
-      border-color: #343A40;
+      border-color: #F27075;
 
   }
 
@@ -94,7 +54,11 @@ export default {
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
-    h2, h4 {
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    }
+  h2, h4 {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  body {
+      background-color:#f6f6f6
+  }
 </style>

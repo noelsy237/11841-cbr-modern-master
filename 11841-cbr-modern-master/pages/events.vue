@@ -38,7 +38,7 @@ export default {
 <style>
     .hr-class {
         border-width: 3px;
-        border-color: #343A40;
+        border-color: #F27075;
     }
 
     img {
@@ -58,5 +58,9 @@ export default {
 
     h2, h4 {
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+
+    body {
+        background-color:#f6f6f6
     }
 </style>
