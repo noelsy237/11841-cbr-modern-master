@@ -6,6 +6,7 @@
 			<hr class="hr-class">
 			<div class="building container-custom">
 				<h4>The Top 20 Mid and Late Century Modern Buildings.</h4>
+				<!-- Calling the buildings list component -->
 				<BuildingsList />
 			</div>
 		</div>

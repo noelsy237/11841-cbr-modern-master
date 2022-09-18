@@ -3,6 +3,7 @@
 		<SiteNavigation />
 		<div class="container">	
 			<div class="building">
+				<!-- Using the data from the API to form small paragraphs -->
 				<h2 class="building-title"><a :href="building[0].link">{{  building[0].title.rendered  }}</a></h2>
 				<h4>Where is it located?</h4>
 				<p>{{  building[0].title.rendered  }} is located at {{  building[0].acf.location  }}, {{  building[0].acf.suburb  }}, Canberra.</p>

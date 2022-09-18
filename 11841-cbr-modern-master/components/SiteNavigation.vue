@@ -1,5 +1,6 @@
 
 <template>
+  <!-- Navbar creation  -->
   <nav class="navbar navbar-expand-lg navbar-light">
     
     <NuxtLink to="/" class="navbar-brand cbr">Canberra Modern</NuxtLink>
